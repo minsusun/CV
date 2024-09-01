@@ -3,7 +3,7 @@
 \usepackage{hyperref}
 \usepackage{kotex}
 
-\setmainhangulfont{Noto Serif CJK KR}[
+\setmainhangulfont{Noto Sans CJK KR}[
   UprightFont=* Light, BoldFont=* Bold,
   Script=Hangul, Language=Korean, AutoFakeSlant,
 ]
@@ -36,36 +36,142 @@
 \begin{rSection}{Skills}
     \begin{tabular}{@{}p{0.25\linewidth}p{0.7\linewidth}}
         Programming Languages
-            & C/C++, Python, Java \\ [0.3em]
+            & C/C++, C\#, Python, Java \\ [0.3em]
+
         Frameworks
             & Flask, FastAPI, BeautifulSoup4, Selenium \\ [0.3em]
+
         Tools
-            & Git/Github, Docker, MySQL \\ [0.3em]
-        Deploy
-            & AWS, GoogleCloud \\ [0.3em]
+            & Git/Github, Docker, AWS, Kubernetes, Helm \\ [0.3em]
+
         Natural Languages
             & Korean(Native), English(Intermediate)
     \end{tabular}
 \end{rSection}
 
 \begin{rSection}{Job Experience}
-    \begin{rSubsection}{\href{https://unitcompany.co.kr}{UnitCompany Inc.}}{Jun 2022 -- Present}
-        {\bfseries\rmfamily{Part-time Backend Engineer}} \\
-        - Contents: Service backend development \\
-        - Skills: Flask, FastAPI, GCP, AWS, Docker
+    \begin{rSubsection}{\href{https://shiftup.co.kr/}{SHIFT UP}}{Jun 2024 -- Aug 2024}
+        {\bfseries\rmfamily{Intern Backend Engineer of \href{https://nikke-en.com/}{NIKKE}}}
+
+        \item Worked on:
+
+        \vspace{-0.5em}
+        \begin{list}{--}{}
+            \itemsep -0.5em
+
+            \item Implementing features of collaborate event mini game
+
+            \item Deploying and managing infra
+        \end{list}
+
+        \item Skills: C\#, Kubernetes, Helm
     \end{rSubsection}
-    \begin{rSubsection}{\href{https://unitcompany.co.kr}{UnitCompany Inc.}}{May 2022 -- Present}
-        {\bfseries\rmfamily{Intern Researcher}} \\
-        - Contents: Recommendation System and LLM research
+
+    \begin{rSubsection}{\href{https://unitcompany.co.kr}{UnitCompany Inc.}}{Jun 2022 -- Jun 2024}
+        {\bfseries\rmfamily{Part-time Backend Engineer}}
+
+        \item Worked on educational service backend development
+
+        \item Skills: Python, AWS, Docker
+    \end{rSubsection}
+
+    \begin{rSubsection}{\href{https://unitcompany.co.kr}{UnitCompany Inc.}}{May 2022 -- Jun 2024}
+        {\bfseries\rmfamily{Intern Researcher}}
+
+        \item Worked on research about recommendation system and LLM
+
+        \item Topics:
+
+        \vspace{-0.5em}
+        \begin{list}{--}{}
+            \itemsep -0.5em
+
+            \item BERT based contents recommendation system
+
+            \item LLM Fine-Tuning
+
+            \item LLM Prompt Engineering
+        \end{list}
     \end{rSubsection}
 \end{rSection}
 
 \begin{rSection}{Projects}
-    \begin{rSubsection}{MDEditor - IntelliJ Real-time Markdown Editor Plugin}{Oct 2023 -- Dec 2023}
-        - Team project developing IntelliJ plugin(\href{https://github.com/minsusun/csed332-project}{link}) \\
-        - Developed based on Agile Software Development and Test Driven-Development \\
-        - Skills: Java, Git/GitHub \\
-        - Main Role: Developer, QA
+    \begin{rSubsection}{Distributed Arduino Calculator}{Aug 2024}
+        Simple Distributed Computing Cluster with Arduinos via $I^2C$ protocol
+
+        \item Individual project simulating distributed 32bit floating point calculation
+
+        \item Distributed 32bit floating point(fp32) addition operations with 4 workers(Arduino Uno)
+
+        \item Approximately took 10 seconds on 400K fp32 addition operations
+    \end{rSubsection}
+
+    \begin{rSubsection}{Sponge}{Mar 2024 -- Jun 2024}
+        Educational TCP/IP Development Project Sponge
+
+        \item Individual project implementing TCP/IP stack on Linux(\href{https://github.com/minsusun/csed353-sponge}{link})
+
+        \item Skills: C++
+
+        \item Additionally implemented SHA256 hash calculation of every frame for debugging and verify purpose
+    \end{rSubsection}
+
+    \begin{rSubsection}{BLARE}{Mar 2024 -- Jun 2024}
+        Blended FLARE(Forward-Looking Active Retrieval Augmented Generation)
+
+        \item Individual research project proposing and implementing blended query formulation method in FLARE(\href{https://github.com/minsusun/BLARE}{link})
+
+        \item Topics: NLP, LLM, RAG(Retreival Augmented Generation)
+    \end{rSubsection}
+
+    \begin{rSubsection}{RISC-V CPU}{Mar 2024 -- Jun 2024}
+        RISC-V 5-Stage Pipelined CPU with Configurable Cache
+
+        \item Team project implementing RISC-V 5-Stage Pipelined CPU with Verilog(\href{https://github.com/minsusun/csed311}{link})
+
+        \item Features:
+        \vspace{-0.5em}
+        \begin{list}{--}{\setlength{\rightmargin}{1.5em}}
+            \itemsep -0.5em
+
+            \item Pipelined 5-Stage Execution
+
+            \item 2-Bit Saturation Counter Branch Predictor with PHT(Prediction History Table) and BTB(Branch Target Buffer)
+
+            \item Multi-way configurable cache based on LRU
+        \end{list}
+    \end{rSubsection}
+
+    \begin{rSubsection}{B-CARAFE}{Nov 2023 -- Dec 2023}
+        Better CARAFE(Content-Aware ReAssembly of FEatures)
+
+        \item Individual research project proposing and implementing better reassembly methods
+
+        \item Proposed new reassembly methods with activation functions attached on original reassembly module
+
+        \item Acheivment:
+        \vspace{-0.5em}
+        \begin{list}{--}{\setlength{\rightmargin}{1.5em}}
+            \itemsep -0.5em
+
+            \item Proposed B-CARAFE(Faster R-CNN + GELU, ResNet-50) - AP: 23.7 fps: 13.25
+
+            \item Original CARAFE++(Faster R-CNN, ResNet-50) - AP: 22.5 fps: 12.54
+        \end{list}
+
+        \item Topics: Computer Vision, Image Segmentation, CARAFE(Content-Aware ReAssembly of FEatures)
+    \end{rSubsection}
+
+    \begin{rSubsection}{MDEditor}{Oct 2023 -- Dec 2023}
+        IntelliJ Real-time Markdown Editor Plugin
+
+        \item Team project developing IntelliJ plugin(\href{https://github.com/minsusun/csed332-project}{link})
+
+        \item Developed based on Agile Software Development and Test Driven-Development
+
+        \item Skills: Java, Git/GitHub
+
+        \item Main Role: Developer, QA
     \end{rSubsection}
     
     \begin{rSubsection}{PintOS}{Sep 2023 -- Dec 2023}
@@ -77,16 +183,37 @@
     \begin{rSubsection}{BaroKey}{Oct 2023}
         - Team project developing web service(\href{https://github.com/UniD3-Hackathon-Team4/barokey}{link}) introduced at 3rd UniThon Hackathon Track \\
         - Web service supplying user real-time emergency-related issue keywords near user's location \\
-        - Skills: Python, FastAPI, BeautifulSoup4, Selenium, AWS EC2 \\
-        - Main Role: Dummy Backend API Developer
+        - Skills: Python(FastAPI, BeautifulSoup4, Selenium), AWS EC2 \\
+        - Main Role: Backend Developer
     \end{rSubsection}
-    
+
+    \begin{rSubsection}{Arduino MIDI Controller}{May 2023 -- Jun 2023}
+        Arduino MIDI Controller for Musical Keyboard
+
+        \item Individual project implementing MIDI controller for musical keyboard
+
+        \item MIDI Controller based on Arduino Leonardo with shift registers and matrix-ed switches
+    \end{rSubsection}
+
+    \begin{rSubsection}{RISC-V SRNPU}{Mar 2023 -- Jun 2023}
+        RISC-V Based Super Resolution Neural Processing Unit
+
+        \item Individual project implementing SRNPU with Verilog
+
+        \item Hardware accelerator dedicated to generate super resolution image based on CNN model
+
+        \item Processed 128x128 image under 4ms with 3 layers Sim-ESPCN CNN model
+
+        \item Processed 128x128 image under 10ms with 8 layers SSAI 2021 CNN model
+    \end{rSubsection}
+
     \begin{rSubsection}{Online Judge Backend}{Jul 2022}
         - Individual project supplying online judge system application to a company \\
         - Online judge system backend based on Qingdao University's seccomp judger library \\
-        - Skills: Python, AWS SQS
+        - Skills: Python, Docker, AWS SQS
     \end{rSubsection}
     
 \end{rSection}
 
 \end{document}
+
