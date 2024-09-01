@@ -1,0 +1,41 @@
+name: CI
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  job:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+      - name: Install Fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install fonts-noto-cjk fonts-noto-cjk-extra
+      - name: Install Tectonic
+        run: |
+          # Need to setup tectonic with `uses statement`
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+      - name: Compile Latex
+        run: |
+          ./tectonic main.tex
+      - name: Rename Compiled PDF
+        run: |
+          mv main.pdf "CV - Minsu Sun(eng).pdf"
+      - name: Upload Compiled PDF
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add *.pdf
+          git commit -m "Add compiled PDF"
+          git push origin ${{ github.head_ref || github.ref_name }}
