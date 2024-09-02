@@ -35,6 +35,6 @@ jobs:
           git add *.pdf
           git commit -m "Add compiled PDF"
           git push origin ${{ github.ref_name }}
-      - uses: actions/create-release@v2
+      - uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
