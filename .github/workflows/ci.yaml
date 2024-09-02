@@ -1,23 +1,19 @@
 name: CI
 
-permissions:
-  contents: write
-
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
 jobs:
   job:
+    permissions:
+      contents: write
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref || github.ref_name }}
+          ref: ${{ github.ref_name }}
       - name: Install Fonts
         run: |
           sudo apt-get update
@@ -34,8 +30,11 @@ jobs:
           mv main.pdf "CV - Minsu Sun(eng).pdf"
       - name: Upload Compiled PDF
         run: |
-          git config --local user.email "actions@github.com"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add *.pdf
           git commit -m "Add compiled PDF"
-          git push origin ${{ github.head_ref || github.ref_name }}
+          git push origin ${{ github.ref_name }}
+      - uses: actions/create-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
