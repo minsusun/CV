@@ -9,9 +9,28 @@
 
 \usepackage{fontspec}
 
+\usepackage{kotex}
+
 \pagestyle{empty}
 
 \setmainfont{Noto Sans}[UprightFont=* Light, BoldFont=* SemiBold]
+
+\setmainhangulfont{Noto Sans CJK KR}[
+  UprightFont=* Light, BoldFont=* Bold,
+  Script=Hangul, Language=Korean, AutoFakeSlant,
+]
+\setsanshangulfont{Noto Sans CJK KR}[
+  UprightFont=* DemiLight, BoldFont=* Medium,
+  Script=Hangul, Language=Korean
+]
+\setmathhangulfont{Noto Sans CJK KR}[
+  SizeFeatures={
+    {Size=-6,  Font=* Medium},
+    {Size=6-9, Font=*},
+    {Size=9-,  Font=* DemiLight},
+  },
+  Script=Hangul, Language=Korean
+]
 
 \def \name#1{\def\@name{#1}}
 \def \@name {}
