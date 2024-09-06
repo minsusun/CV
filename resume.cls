@@ -37,7 +37,7 @@
 
 \newenvironment{rSection}[1]{
   \sectionskipbefore
-  {\bfseries\rmfamily #1}
+  {\bfseries #1}
   \sectionskipafter
   \hrule
   \begin{list}{}{
@@ -49,7 +49,7 @@
 }
 
 \newenvironment{rSubsection}[2]{
-  {\bfseries\rmfamily #1} \hfill {\it #2}
+  {\bfseries #1} \hfill {\it #2}
   \begin{list}{--}{
     \setlength{\leftmargin}{1.5em}
     \setlength{\rightmargin}{1.5em}
@@ -61,7 +61,7 @@
   \vspace{0.2em}
 }
 
-\def\namestyle{\bfseries\rmfamily}
+\def\namestyle{\bfseries}
 \def\namesize{\huge}
 \def\nameskip{\bigskip}
 \def\emailstyle{\ttfamily}
