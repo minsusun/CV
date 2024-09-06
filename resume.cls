@@ -7,7 +7,11 @@
 
 \usepackage{lmodern}
 
+\usepackage{fontspec}
+
 \pagestyle{empty}
+
+\setmainfont{Noto Sans}[UprightFont=* Light, BoldFont=* SemiBold]
 
 \def \name#1{\def\@name{#1}}
 \def \@name {}
@@ -49,7 +53,7 @@
 }
 
 \newenvironment{rSubsection}[2]{
-  {\bfseries #1} \hfill {\it #2}
+  {\bfseries #1} \hfill {\small\it #2}
   \begin{list}{--}{
     \setlength{\leftmargin}{1.5em}
     \setlength{\rightmargin}{1.5em}
