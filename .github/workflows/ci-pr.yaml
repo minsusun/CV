@@ -15,7 +15,7 @@ jobs:
       - name: Install Fonts
         run: |
           sudo apt-get update
-          sudo apt-get install fonts-noto-cjk fonts-noto-cjk-extra
+          sudo apt-get install fonts-noto fonts-noto-cjk fonts-noto-cjk-extra
       - name: Install Tectonic
         run: |
           # Need to setup tectonic with `uses statement`
