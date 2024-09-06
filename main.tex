@@ -142,6 +142,32 @@
         \end{list}
     \end{rSubsection}
 
+    \begin{rSubsection}{CUDA Based Parallel KNN Calculation}{Dec 2023}
+        Optimizing naive KNN(K Nearest Neighbors) operation executed on CUDA
+
+        \item Individual research project optimizing naive KNN operation on CUDA device
+
+        \item Composed KNN operation as a combination of belows
+        \vspace{-0.5em}
+        \begin{list}{--}{\setlength{\rightmargin}{1.5em}}
+            \itemsep -0.5em
+
+            \item Build euclidean distance matrix of given points in the manner of matrix multiplication using tiling
+
+            \item Sort distances of neighbors using thrust::sort and select K neighbors
+        \end{list}
+
+        \item Achievement:
+        \vspace{-0.5em}
+        \begin{list}{--}{\setlength{\rightmargin}{1.5em}}
+            \itemsep -0.5em
+
+            \item Calculating distances: about 28 times
+
+            \item Sorting distances: about 11 times
+        \end{list}
+    \end{rSubsection}
+
     \begin{rSubsection}{B-CARAFE}{Nov 2023 -- Dec 2023}
         Better CARAFE(Content-Aware ReAssembly of FEatures)
 
@@ -149,7 +175,7 @@
 
         \item Proposed new reassembly methods with activation functions attached on original reassembly module
 
-        \item Acheivment:
+        \item Achievement:
         \vspace{-0.5em}
         \begin{list}{--}{\setlength{\rightmargin}{1.5em}}
             \itemsep -0.5em
