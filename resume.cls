@@ -13,7 +13,7 @@
 
 \pagestyle{empty}
 
-\setmainfont{Noto Sans}[UprightFont=* Light, BoldFont=* SemiBold]
+\setmainfont{NotoSans}[UprightFont=*-Thin, BoldFont=*-SemiBold]
 
 \setmainhangulfont{Noto Sans CJK KR}[
   UprightFont=* Light, BoldFont=* Bold,
