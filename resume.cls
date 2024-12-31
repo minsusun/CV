@@ -13,7 +13,7 @@
 
 \pagestyle{empty}
 
-\setmainfont{NotoSans}[UprightFont=*-Thin, BoldFont=*-SemiBold]
+\setmainfont{NotoSans}[UprightFont=*-Light, BoldFont=*-SemiBold]
 
 \setmainhangulfont{Noto Sans CJK KR}[
   UprightFont=* Light, BoldFont=* Bold,
@@ -60,7 +60,7 @@
 
 \newenvironment{rSection}[1]{
   \sectionskipbefore
-  {\bfseries #1}
+  {\Large \bfseries #1}
   \sectionskipafter
   \hrule
   \begin{list}{}{
